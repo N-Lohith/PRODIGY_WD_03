@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2fad4;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+#modeSelection {
+    margin-bottom: 20px;
+}
+
+.mode-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+}
+
+.mode-button:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+    background-color: #e0e0e0; /* Light grey background */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cell.x::before {
+    content: 'X';
+    color: blue;
+}
+
+.cell.o::before {
+    content: 'O';
+    color: red;
+}
+
+.winning-message {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.winning-message.show {
+    display: flex;
+}
+
+.restart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: #f44336; /* Red background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+}
+
+.restart-button:hover {
+    background-color: #d32f2f; /* Darker red */
+}
